@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jacob McCurry — Quinnipiac University</title>
+  <meta name="description" content="Jacob McCurry, Computer Information Systems student at Quinnipiac University.">
+  <meta property="og:title" content="Jacob McCurry — Quinnipiac&nbsp;University">
+  <meta property="og:description" content="Jacob McCurry, Computer Information Systems student at Quinnipiac&nbsp;University.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <style>
+    :root{--ink:#f4f1ea;--paper:#0e1726;--muted:#8fa3bd;--surface:#16223a;--sand:#ead8b0;--max-width:1024px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;min-height:100vh;background:var(--paper);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+    ::selection{background:rgba(126,166,216,.15)}
+    a{color:inherit;text-decoration:none}
+    .container{width:100%;max-width:var(--max-width);margin:0 auto;padding:0 24px}
+    .eyebrow,.section-label,.based-label,.action-label,.pdf-meta{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace}
+    .eyebrow,.section-label{font-size:12px;line-height:1.25;text-transform:uppercase;letter-spacing:.18em;color:var(--muted)}
+    .hero-section{background:#0e1726}.hero{padding:80px 0}
+    .hero-grid,.resume-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px}
+    .hero-main{grid-column:span 12}
+    .hero h1{max-width:16ch;margin:16px 0 0;font-size:48px;line-height:1;font-weight:600;letter-spacing:-.03em}
+    .hero-description{max-width:48ch;margin:24px 0 0;font-size:18px;line-height:1.55;color:rgba(244,241,234,.7)}
+    .based-wrapper{grid-column:span 12}
+    .based-card,.action-card{background:var(--paper);border-left:2px solid var(--sand)}
+    .based-card{padding:20px;background:#16223a}
+    .based-label{margin:0;font-size:12px;line-height:1.25;text-transform:uppercase;letter-spacing:.14em;color:var(--sand)}
+    .based-location{margin:4px 0 0;font-size:14px;line-height:1.5}
+    .section{border-top:1px solid rgba(14,23,38,.22);background:#ead8b0;color:#0e1726}
+    .section-inner{padding:64px 0}
+    .section-label{display:flex;align-items:center;gap:12px;margin-bottom:48px}.section-label{color:#0e1726;font-weight:600}
+    .resume-grid{gap:40px;align-items:start}
+    .resume-copy{grid-column:span 12}
+    .resume-actions{grid-column:span 12;width:100%}
+    .section-heading{max-width:52ch;margin:0;font-size:30px;line-height:1.2;font-weight:500;letter-spacing:-.02em}
+    .section-description{max-width:52ch;margin:16px 0 0;font-size:16px;line-height:1.6;color:rgba(14,23,38,.72)}
+    .action-card{width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px;transition:background-color .18s ease,color .18s ease}
+    .action-card:hover{background:#0e1726;color:var(--ink)}
+    .action-card:hover .action-label{color:var(--sand)}
+    .action-label{flex-shrink:0;font-size:12px;line-height:1.25;text-transform:uppercase;letter-spacing:.12em;color:var(--sand);transition:color .18s ease}
+    .action-value{font-size:14px;line-height:1.4;text-align:right}
+    .pdf-meta{margin:12px 0 0;font-size:12px;line-height:1.25;color:rgba(14,23,38,.65)}
+    .contact-heading{max-width:24ch;margin:0;font-size:36px;line-height:1.2;font-weight:500;letter-spacing:-.02em}
+    .contact-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:48px}
+    a:focus-visible{outline:2px solid var(--sand);outline-offset:4px}
+    @media(min-width:640px){
+      .container{padding:0 40px}
+      .hero{padding:112px 0}
+      .hero h1{font-size:60px}
+      .section-inner{padding:80px 0}
+      .section-heading{font-size:32px}
+      .contact-heading{font-size:40px}
+      .contact-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+    }
+    @media(min-width:1024px){
+      .hero-main{grid-column:span 8}
+      .based-wrapper{grid-column:span 4}
+      .resume-copy{grid-column:span 7}
+      .resume-actions{grid-column:span 5}
+    }
+    @media(max-width:639px){.action-value{overflow-wrap:anywhere}.eyebrow{white-space:nowrap;font-size:10px;letter-spacing:.10em}.cis-nowrap{white-space:nowrap}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.action-card{transition:none}}
+  
+@media(max-width:700px){
+  .resume-actions{width:100%;grid-column:1 / -1}
+  .resume-actions .action-card{width:100%;box-sizing:border-box}
+  .based-card,.action-card{box-sizing:border-box}
+}
+.quinnipiac-nowrap{white-space:nowrap}
+.eyebrow .quinnipiac-nowrap{white-space:nowrap}
+</style>
+</head>
+<body>
+<main>
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero">
+        <div class="hero-grid">
+          <div class="hero-main">
+            <p class="eyebrow">Quinnipiac&nbsp;University · <span class="cis-nowrap">Computer Information Systems</span></p>
+            <h1>Jacob McCurry</h1>
+            <p class="hero-description">Computer Information Systems student at Quinnipiac&nbsp;University.</p>
+          </div>
+          <div class="based-wrapper">
+            <div class="based-card">
+              <p class="based-label">Based</p>
+              <p class="based-location">Queensbury, NY &amp; North Haven, CT</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" class="section">
+    <div class="container">
+      <div class="section-inner">
+        <div class="section-label">Resume</div>
+        <div class="resume-grid">
+          <div class="resume-copy">
+            <h2 class="section-heading">A full look at my education, experience, and skills.</h2>
+            <p class="section-description">Download a PDF copy of my resume to get the full picture.</p>
+          </div>
+          <div class="resume-actions">
+            <a href="McCurryResume.pdf" download class="action-card">
+              <span class="action-label">Resume</span>
+              <span class="action-value">Download PDF ↓</span>
+            </a>
+            <p class="pdf-meta">PDF · Updated 2026</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-inner">
+        <div class="section-label">Contact</div>
+        <p class="contact-heading">I'm happy to get in touch! Email is the best way to reach me.</p>
+        <div class="contact-grid">
+          <a href="mailto:jtmccurry@quinnipiac.edu" class="action-card">
+            <span class="action-label">Email</span>
+            <span class="action-value">jtmccurry@quinnipiac.edu</span>
+          </a>
+          <a href="tel:+15187694946" class="action-card">
+            <span class="action-label">Phone</span>
+            <span class="action-value">(518) 769-4946</span>
+          </a>
+          <a href="https://www.linkedin.com/in/jtmccurry" target="_blank" rel="noreferrer" class="action-card">
+            <span class="action-label">LinkedIn</span>
+            <span class="action-value">/in/jtmccurry</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
