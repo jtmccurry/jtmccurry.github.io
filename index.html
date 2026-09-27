@@ -12,8 +12,8 @@
   <style>
     :root{--ink:#f4f1ea;--paper:#0e1726;--muted:#8fa3bd;--surface:#16223a;--sand:#ead8b0;--max-width:1024px}
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;min-height:100vh;background:var(--paper);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+    html{scroll-behavior:smooth;overflow-x:hidden}
+    body{margin:0;min-height:100vh;overflow-x:hidden;background:var(--paper);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
     ::selection{background:rgba(126,166,216,.15)}
     a{color:inherit;text-decoration:none}
     .container{width:100%;max-width:var(--max-width);margin:0 auto;padding:0 24px}
@@ -21,10 +21,10 @@
     .eyebrow,.section-label{font-size:12px;line-height:1.25;text-transform:uppercase;letter-spacing:.18em;color:var(--muted)}
     .hero-section{background:#0e1726}.hero{padding:80px 0}
     .hero-grid,.resume-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px}
-    .hero-main{grid-column:span 12}
+    .hero-main{grid-column:span 12;min-width:0}
     .hero h1{max-width:16ch;margin:16px 0 0;font-size:48px;line-height:1;font-weight:600;letter-spacing:-.03em}
     .hero-description{max-width:48ch;margin:24px 0 0;font-size:18px;line-height:1.55;color:rgba(244,241,234,.7)}
-    .based-wrapper{grid-column:span 12}
+    .based-wrapper{grid-column:span 12;min-width:0}
     .based-card,.action-card{background:var(--paper);border-left:2px solid var(--sand)}
     .based-card{padding:20px;background:#16223a}
     .based-label{margin:0;font-size:12px;line-height:1.25;text-transform:uppercase;letter-spacing:.14em;color:var(--sand)}
@@ -33,11 +33,11 @@
     .section-inner{padding:64px 0}
     .section-label{display:flex;align-items:center;gap:12px;margin-bottom:48px}.section-label{color:#0e1726;font-weight:600}
     .resume-grid{gap:40px;align-items:start}
-    .resume-copy{grid-column:span 12}
-    .resume-actions{grid-column:span 12;width:100%}
+    .resume-copy{grid-column:span 12;min-width:0}
+    .resume-actions{grid-column:span 12;width:100%;min-width:0}
     .section-heading{max-width:52ch;margin:0;font-size:30px;line-height:1.2;font-weight:500;letter-spacing:-.02em}
     .section-description{max-width:52ch;margin:16px 0 0;font-size:16px;line-height:1.6;color:rgba(14,23,38,.72)}
-    .action-card{width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px;transition:background-color .18s ease,color .18s ease}
+    .action-card{width:100%;max-width:100%;min-width:0;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px;transition:background-color .18s ease,color .18s ease}
     .action-card:hover{background:#0e1726;color:var(--ink)}
     .action-card:hover .action-label{color:var(--sand)}
     .action-label{flex-shrink:0;font-size:12px;line-height:1.25;text-transform:uppercase;letter-spacing:.12em;color:var(--sand);transition:color .18s ease}
@@ -65,8 +65,10 @@
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.action-card{transition:none}}
   
 @media(max-width:700px){
-  .resume-actions{width:100%;grid-column:1 / -1}
-  .resume-actions .action-card{width:100%;box-sizing:border-box}
+  .resume-actions{width:100%;max-width:100%;min-width:0;grid-column:1 / -1}
+  .resume-actions .action-card{display:flex;width:100%;max-width:100%;min-width:0;box-sizing:border-box}
+  .contact-grid{width:100%;min-width:0}
+  .contact-grid .action-card{width:100%;max-width:100%;min-width:0}
   .based-card,.action-card{box-sizing:border-box}
 }
 .quinnipiac-nowrap{white-space:nowrap}
