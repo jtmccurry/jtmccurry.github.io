@@ -43,6 +43,19 @@
     .action-label{flex-shrink:0;font-size:12px;line-height:1.25;text-transform:uppercase;letter-spacing:.12em;color:var(--sand);transition:color .18s ease}
     .action-value{font-size:14px;line-height:1.4;text-align:right}
     .pdf-meta{margin:12px 0 0;font-size:12px;line-height:1.25;color:rgba(14,23,38,.65)}
+    /* Portfolio: responsive project cards matching the site's navy and sand palette */
+    .portfolio-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:32px}
+    .portfolio-card{display:flex;flex-direction:column;gap:14px;min-width:0;padding:24px;background:var(--paper);color:var(--ink);border-left:2px solid var(--sand)}
+    .portfolio-type{margin:0;font:12px/1.4 "SFMono-Regular",Consolas,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--sand)}
+    .portfolio-title{margin:0;font-size:21px;line-height:1.3;font-weight:500}
+    .portfolio-description{margin:0;font-size:14px;line-height:1.6;color:rgba(244,241,234,.75)}
+    /* Portfolio screenshots: put both PNG files beside this HTML file. */
+    .portfolio-screenshot{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--surface);border:1px solid rgba(244,241,234,.16);border-radius:3px}
+    .portfolio-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:6px}
+    .portfolio-button{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:10px 14px;border:1px solid var(--sand);color:var(--sand);font-size:13px;font-weight:600;transition:background-color .18s,color .18s}
+    .portfolio-button:hover{background:var(--sand);color:var(--paper)}
+    .portfolio-button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+    .portfolio-note{margin:16px 0 0;font-size:12px;line-height:1.5;color:rgba(14,23,38,.7)}
     .contact-heading{max-width:24ch;margin:0;font-size:36px;line-height:1.2;font-weight:500;letter-spacing:-.02em}
     .contact-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:48px}
     a:focus-visible{outline:2px solid var(--sand);outline-offset:4px}
@@ -54,6 +67,7 @@
       .section-heading{font-size:32px}
       .contact-heading{font-size:40px}
       .contact-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
     }
     @media(min-width:1024px){
       .hero-main{grid-column:span 8}
@@ -118,6 +132,40 @@
     </div>
   </section>
 
+  <!-- Portfolio: replace these sample descriptions with your actual projects and links. -->
+  <section id="portfolio" class="section">
+    <div class="container">
+      <div class="section-inner">
+        <div class="section-label">Portfolio</div>
+        <h2 class="section-heading">Selected projects and work.</h2>
+        <p class="section-description">A look at projects I've worked on.</p>
+        <div class="portfolio-grid">
+          <article class="portfolio-card">
+            <img class="portfolio-screenshot" src="ai-lab-screenshot.png" alt="Screenshot of the Applied AI Lab website" loading="lazy">
+            <h3 class="portfolio-title">Applied AI Lab Website</h3>
+            <p class="portfolio-description">A university lab site for events, fellowships, and industry partners.</p>
+            <div class="portfolio-links">
+              <!-- Replace # with the actual website and repository URLs when available. -->
+              <a class="portfolio-button" href="#" data-pending-link="true">View website ↗</a>
+              <a class="portfolio-button" href="#" data-pending-link="true">GitHub ↗</a>
+            </div>
+          </article>
+          <article class="portfolio-card">
+            <img class="portfolio-screenshot" src="maintenance-system-screenshot.png" alt="Screenshot of the Maintenance Tracking System project" loading="lazy">
+            <h3 class="portfolio-title">Maintenance Tracking System</h3>
+            <p class="portfolio-description">A proposed system to streamline university maintenance requests.</p>
+            <div class="portfolio-links">
+              <!-- Replace # with project documentation and repository URLs when available. -->
+              <a class="portfolio-button" href="#" data-pending-link="true">View project ↗</a>
+              <a class="portfolio-button" href="#" data-pending-link="true">GitHub ↗</a>
+            </div>
+          </article>
+        </div>
+        <p class="portfolio-note">Project links will be added when available.</p>
+      </div>
+    </div>
+  </section>
+
   <section id="contact" class="section">
     <div class="container">
       <div class="section-inner">
@@ -141,5 +189,11 @@
     </div>
   </section>
 </main>
+<script>
+  // Keep placeholder buttons from jumping to the top until real links are provided.
+  document.querySelectorAll('[data-pending-link="true"]').forEach(link => {
+    link.addEventListener('click', event => event.preventDefault());
+  });
+</script>
 </body>
 </html>
